@@ -26,15 +26,15 @@ class StackoverflowControllerTest {
 
     @BeforeEach
     void init() {
-        MockitoAnnotations.initMocks( this );
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test
-    void getListProviders(){
+    void getListProviders() {
         //prepare
         when(stackoverflowService.findAll()).thenReturn(ImmutableList.of());
         //testing
-        List<StackoverflowWebsite> listOfProviders =  sut.getListProviders();
+        List<StackoverflowWebsite> listOfProviders = sut.getListProviders();
         //validate
         verify(stackoverflowService).findAll();
     }

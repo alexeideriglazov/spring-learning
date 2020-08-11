@@ -1,7 +1,7 @@
 var app = angular.module("springLearning", []);
 
-app.controller("AppCtrl", function($scope, $http){
-    $scope.websites=[{
+app.controller("AppCtrl", function ($scope, $http) {
+    $scope.websites = [{
         iconImageUrl: '',
         id: 'stackoverflow',
         website: 'stackoverflow.com',
@@ -15,7 +15,7 @@ app.controller("AppCtrl", function($scope, $http){
     }).then(function (response) {
         console.log(response, 'res');
         $scope.websites = response.data;
-    },function (error){
+    }, function (error) {
         console.log(error, 'can not get data.');
     });
 });
